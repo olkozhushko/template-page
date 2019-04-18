@@ -6,83 +6,134 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>page</title>
-  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
+    integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+  <link rel='stylesheet' href='style.css'>
 </head>
 
 <body>
   <header class="header">
-    <div class="container header__container">
-      <div>
-        <p class="header__text-question">what are you waiting for?</p>
-        <h1 class="header__title">let's be creative</h1>
+    <div class="container header__content-wrapper">
+      <div class="header__title-block">
+        <p class="header__text header__text_question">what are you waiting for?</p>
+        <h1 class="header__title">let's be creative !<span></span></h1>
       </div>
       <div>
-        <p class="header__text-call">start doing that</p>
-        <span class="arrow-down"></span>
+        <div class="header__slogan-container slogan-container">
+          <div class="double-lines-container">
+            <span class="double-lines"></span>
+            <span class="double-lines"></span>
+          </div>
+          <p class="header__slogan slogan-container__text">
+            <i class="fas fa-angle-double-right angle_theme"></i>
+            <span class="accent">start</span> doing that
+            <i class="fas fa-angle-double-left angle_theme"></i>
+          </p>
+          <div class="double-lines-container">
+            <span class="double-lines double-lines_color_reverse"></span>
+            <span class="double-lines double-lines_color_reverse"></span>
+          </div>
+        </div>
+        <div class="see-more-container">
+          <a href="#" class="see-more-container__link">
+            <i class="fas fa-angle-down see-more-container__icon-down"></i>
+          </a>
+        </div>
       </div>
     </div>
   </header>
+
   <nav class="page-nav">
-    <div class="logo">
-      <img src="" class="logo__img" alt="">
+    <div class="logo-container">
+      <img src="./img/logo.png" class="logo logo-container__img" alt="">
       <span class="logo__caption">Startuper</span>
     </div>
     <ul class="page-nav__menu">
       <li class="page-nav__item">
-        <a href="#" class="page-nav__link"></a>
+        <a href="#" class="page-nav__link">home</a>
       </li>
       <li class="page-nav__item">
-        <a href="#" class="page-nav__link"></a>
+        <a href="#" class="page-nav__link">portfolio</a>
       </li>
       <li class="page-nav__item">
-        <a href="#" class="page-nav__link"></a>
+        <a href="#" class="page-nav__link">blog</a>
       </li>
       <li class="page-nav__item">
-        <a href="#" class="page-nav__link"></a>
+        <a href="#" class="page-nav__link">pages</a>
       </li>
       <li class="page-nav__item">
-        <a href="#" class="page-nav__link"></a>
+        <a href="#" class="page-nav__link">features</a>
       </li>
       <li class="page-nav__item">
-        <a href="#" class="page-nav__link"></a>
+        <a href="#" class="page-nav__link">mega menu</a>
       </li>
       <li class="page-nav__item">
-        <a href="#" class="page-nav__link"></a>
+        <a href="#" class="page-nav__link">contact</a>
       </li>
     </ul>
   </nav>
 
   <section id="services" class="services-section">
+
     <div class="services-section__wrapper">
-      <h2 class="services-section__title">What we offer</h2>
-      <p class="services-section__inform">We offer our customer the best services & solutions,
+      <div class="slogan-container">
+        <div class="double-lines-container double-lines-container_title-width">
+          <span class="double-lines"></span>
+          <span class="double-lines"></span>
+        </div>
+        <h2 class="slogan-container__text">
+          <i class="fas fa-angle-double-right angle_theme"></i>
+          What we <span class="accent">offer</span>
+          <i class="fas fa-angle-double-left angle_theme"></i>
+        </h2>
+        <div class="double-lines-container double-lines-container_title-width">
+          <span class="double-lines double-lines_color_reverse"></span>
+          <span class="double-lines double-lines_color_reverse"></span>
+        </div>
+      </div>
+      <p class="services-section__desc">We offer our customer the best services & solutions,
         this is our main service list
       </p>
     </div>
-    <div class="services-section__card">
-      <span class="services-section__card-icon"></span>
-      <h3 class="services-section__heading"></h3>
-      <p class="services-section__text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facilis laborum dicta
-        nisi
-        accusamus quasi.</p>
-      <a class="services-section__link">read more</a>
-    </div>
-    <div class="services-section__card">
-      <span class="services-section__card-icon"></span>
-      <h3 class="services-section__heading">easy customization</h3>
-      <p class="services-section__text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facilis laborum dicta
-        nisi
-        accusamus quasi.</p>
-      <a class="services-section__link">read more</a>
-    </div>
-    <div class="services-section__card">
-      <span class="services-section__card-icon"></span>
-      <h3 class="services-section__heading">awesome friendly support</h3>
-      <p class="services-section__text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facilis laborum dicta
-        nisi
-        accusamus quasi.</p>
-      <a class="services-section__link">read more</a>
+
+    <div class="cards-container">
+
+      <div class="services-section__card">
+        <div class="services-section__card-icon-container">
+          <i class="fas fa-tv services-section__card-icon card-icon"></i>
+        </div>
+        <h3 class="services-section__card-heading">responsive & multipurpose</h3>
+        <p class="services-section__card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facilis laborum
+          dicta
+          nisi
+          accusamus quasi.</p>
+        <a class="services-section__card-link">read more</a>
+      </div>
+
+      <div class="services-section__card">
+        <div class="services-section__card-icon-container card_theme">
+            <i class="fas fa-puzzle-piece services-section__card-icon card-icon"></i>
+        </div>
+        <h3 class="services-section__card-heading">easy customization</h3>
+        <p class="services-section__card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facilis laborum
+          dicta
+          nisi
+          accusamus quasi.</p>
+        <a class="services-section__card-link">read more</a>
+      </div>
+
+      <div class="services-section__card">
+        <div class="services-section__card-icon-container">
+          <i class="fas fa-life-ring services-section__card-icon card-icon"></i>
+        </div>
+        <h3 class="services-section__card-heading">awesome friendly support</h3>
+        <p class="services-section__card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facilis laborum
+          dicta
+          nisi
+          accusamus quasi.</p>
+        <a class="services-section__card-link">read more</a>
+      </div>
+
     </div>
   </section>
 
@@ -678,15 +729,16 @@
     <div class="contact-section__form-container">
       <form class="form-group">
         <label for="name">
-          <input type="text" name="name" id="name" 
-            placeholder="Name" value="" class="form-group__name form-group__controls">
+          <input type="text" name="name" id="name" placeholder="Name" value=""
+            class="form-group__name form-group__controls">
         </label>
         <label for="email">
-          <input type="email" name="email" id="email" placeholder="Email Address" value="" class="form-group__email form-group__controls">
+          <input type="email" name="email" id="email" placeholder="Email Address" value=""
+            class="form-group__email form-group__controls">
         </label>
         <label for="message">
-          <textarea name="message" id="message" 
-          placeholder="message" class="form-group__message form-group__controls"></textarea>
+          <textarea name="message" id="message" placeholder="message"
+            class="form-group__message form-group__controls"></textarea>
         </label>
         <input type="submit" class="form-group__btn">
       </form>

@@ -1,0 +1,82 @@
+$theme: #00A99D;
+
+.services-section {
+  padding: 4rem;
+}
+
+.services-section__wrapper {
+  margin-bottom: 2rem;
+}
+
+.double-lines-container_title-width {
+  flex-basis: 36%;
+}
+
+.services-section__desc {
+  color: #9B9B9B;
+  text-align: center;
+  margin-top: 1rem;
+}
+
+//offering cards
+
+.cards-container {
+  display: flex;
+  justify-content: space-around;
+
+  .services-section__card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 1rem;
+
+
+    .services-section__card-icon-container {
+      width: 7rem;
+      height: 7rem;
+      background: #383838;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      .services-section__card-icon {
+        font-size: 2.5rem;
+        color: #E4E4E4;
+      }
+    }
+
+    .card_theme {
+      background: $theme;
+    }
+
+    .services-section__card-heading {
+      text-transform: uppercase;
+      color: #606060;
+      font-weight: 600;
+      margin-top: 2rem;
+    }
+
+    .services-section__card-text {
+      color: #8F8F8F;
+      text-align: center;
+      padding: 1rem 0;
+    }
+
+    .services-section__card-link {
+      padding: 0.2rem 0.4rem;
+      text-transform: uppercase;
+      font-size: 0.7rem;
+      font-weight: 600;
+      border: 1px solid rgb(180, 168, 168);
+      border-radius: 0.15rem;
+      transition: all 0.3s;
+    }
+
+    .services-section__card-link:hover {
+      background: $theme;
+      border-color: transparent;
+      color: #E4E4E4;
+    }
+  }
+}
