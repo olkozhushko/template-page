@@ -1,0 +1,28 @@
+$theme-text: #606060;
+
+.features-section__top {
+  background: #383838 url(../img/ipad.png) 
+  right bottom / 250px 400px no-repeat;
+  padding-top: 4rem;
+}
+
+.slogan-container_flex_center {
+  justify-content: center;
+}
+
+.section__desc_dark {
+  color: $theme-text;
+  font-weight: 600;
+  font-size: 1.1rem;
+}
+
+.slogan-container__light-text {
+  color: #E4E4E4;
+  font: inherit;
+}
+
+.features-block {
+  width: 30%;
+  display: grid;
+  grid-template-columns: 1fr;
+}

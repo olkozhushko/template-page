@@ -1,4 +1,5 @@
 $theme: #00A99D;
+$text-color: #939393;
 
 .services-section {
   padding: 4rem;
@@ -12,8 +13,8 @@ $theme: #00A99D;
   flex-basis: 36%;
 }
 
-.services-section__desc {
-  color: #9B9B9B;
+.section__desc {
+  color: $text-color;
   text-align: center;
   margin-top: 1rem;
 }
@@ -40,7 +41,7 @@ $theme: #00A99D;
       align-items: center;
       justify-content: center;
 
-      .services-section__card-icon {
+      .card-icon {
         font-size: 2.5rem;
         color: #E4E4E4;
       }
@@ -58,7 +59,7 @@ $theme: #00A99D;
     }
 
     .services-section__card-text {
-      color: #8F8F8F;
+      color: $text-color;
       text-align: center;
       padding: 1rem 0;
     }
