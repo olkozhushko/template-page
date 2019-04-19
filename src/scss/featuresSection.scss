@@ -1,9 +1,11 @@
-$theme-text: #606060;
+$theme-text: #797373;
+$page-theme: #00A99D;
+@import "servicesSection.scss";
 
 .features-section__top {
   background: #383838 url(../img/ipad.png) 
-  right bottom / 250px 400px no-repeat;
-  padding-top: 4rem;
+  800px 250px / 300px 400px no-repeat;
+  padding: 4rem 3rem 2rem 3rem;
 }
 
 .slogan-container_flex_center {
@@ -25,4 +27,127 @@ $theme-text: #606060;
   width: 30%;
   display: grid;
   grid-template-columns: 1fr;
+}
+
+.features-card {
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: 1.5rem;
+}
+
+.card-icon-container {
+  flex-basis: 30%;
+  text-align: center;
+  padding-top: 2rem;
+}
+
+.card-icon {
+  color: $page-theme;
+}
+
+.features-card__content-container {
+  flex-basis: 70%;
+}
+
+.features-card__title {
+  text-transform: uppercase;
+  color: #E4E4E4;
+  font-size: 0.8rem;
+  font-weight: 700;
+  margin: 1rem 0;
+}
+
+.features-card__text {
+  color: $theme-text;
+  font-size: 0.9rem;
+  font-weight: 500;
+}
+
+//the bottom part
+
+.features-section__bottom {
+  background: #F9F9F9;
+  padding: 3rem;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-column-gap: 1rem;
+  grid-row-gap: 4rem;
+}
+
+.full-feature-card {
+  display: flex;
+}
+
+.full-feature-card__main-content {
+  padding: 0 1rem;
+}
+
+.full-feature-card__icon-wrapper {
+  align-self: flex-start;
+  margin-top: 0.4rem;
+  height: 60px;
+  flex-basis: 27%;
+  position: relative;
+}
+
+//for icon placed near the feature-card
+
+.cont-filler1 {
+  height: 55%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #383838;
+  border-top-left-radius: 0.2rem;
+  border-top-right-radius: 0.2rem;
+}
+
+.full-feature-card__icon {
+  color: #E4E4E4;
+}
+
+.cont-filler1::after, .cont-filler2::before {
+  content: "";
+  position: absolute;
+  display: block;
+  box-sizing: border-box;
+  top: 55%;
+  left: 0;
+  width: 100%;
+  height: 0px;
+  border-top: 0.8rem solid #383838;
+  border-left: 1.3rem solid transparent;
+  border-right: 1.3rem solid transparent;
+}
+
+.cont-filler2::before {
+  top: 100%;
+  border-top-color: $page-theme;
+}
+
+.cont-filler2 {
+  height: 45%;
+  width: 100%;
+  background: $page-theme;
+}
+
+.full-feature-card__title {
+  text-transform: uppercase;
+  font-size: 1rem;
+  font-weight: 600;
+  color: #606060;
+  margin-bottom: 0.1rem;
+}
+
+.full-feature-card__brief-desc {
+  color: rgb(168, 154, 154);
+  font-size: 0.8rem;
+}
+
+.full-feature-card__desc {
+  color: rgb(116, 109, 109);
+  font-size: 0.9rem;
+  margin-top: 1rem;
 }
