@@ -1,0 +1,52 @@
+@import "main.scss";
+
+.skill-section {
+  background: $theme-dark;
+  padding: $section-pad;
+}
+
+.slogan-container_flex-all_center {
+  flex-direction: column;
+}
+
+.skill-section__main-content {
+  display: flex;
+  justify-content: space-around;
+  padding: 3rem 0;
+}
+
+.skill-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.skill-card__estim {
+  width: 130px;
+  height: 130px;
+  border-radius: 50%;
+  border-top: 0.2rem solid $page-theme;
+  border-left: 0.2rem solid $page-theme;
+  border-bottom: 0.2rem solid $el-color;
+  border-right: 0.2rem solid $el-color;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font: 600 1.7rem/1.7rem arial, sans-serif;
+  color: $el-color;
+}
+
+.percent-sign {
+  font-size: 1.2rem;
+  position: relative;
+  top: 2px;
+}
+
+.skill-card__inform {
+  color: $text-color;
+  margin-top: 0.8rem;
+  text-transform: uppercase;
+  font-size: 0.9rem;
+  font-weight: 800;
+  text-align: center;
+}

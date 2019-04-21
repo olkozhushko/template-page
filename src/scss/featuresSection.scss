@@ -1,11 +1,10 @@
-$theme-text: #797373;
-$page-theme: #00A99D;
+@import "main.scss";
 @import "servicesSection.scss";
 
 .features-section__top {
   background: #383838 url(../img/ipad.png) 
   800px 250px / 300px 400px no-repeat;
-  padding: 4rem 3rem 2rem 3rem;
+  padding: $section-pad;
 }
 
 .slogan-container_flex_center {
@@ -13,9 +12,9 @@ $page-theme: #00A99D;
 }
 
 .section__desc_dark {
-  color: $theme-text;
+  color: $theme-text-dark;
   font-weight: 600;
-  font-size: 1.1rem;
+  font-size: 1.05rem;
 }
 
 .slogan-container__light-text {
@@ -42,7 +41,7 @@ $page-theme: #00A99D;
   padding-top: 2rem;
 }
 
-.card-icon {
+.features-section__card-icon {
   color: $page-theme;
 }
 
@@ -59,7 +58,7 @@ $page-theme: #00A99D;
 }
 
 .features-card__text {
-  color: $theme-text;
+  color: $text-color;
   font-size: 0.9rem;
   font-weight: 500;
 }

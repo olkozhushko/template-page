@@ -1,11 +1,11 @@
-$theme: #00A99D;
-$text-color: #939393;
+@import "main.scss";
 
 .services-section {
-  padding: 4rem;
+  padding: $section-pad;
+  background: $theme-light;
 }
 
-.services-section__wrapper {
+.section-header-wrapper {
   margin-bottom: 2rem;
 }
 
@@ -49,7 +49,7 @@ $text-color: #939393;
 }
 
 .card_theme {
-  background: $theme;
+  background: $page-theme;
 }
 
 .services-section__card-heading {
@@ -76,7 +76,7 @@ $text-color: #939393;
 }
 
 .services-section__card-link:hover {
-  background: $theme;
+  background: $page-theme;
   border-color: transparent;
   color: #E4E4E4;
 }

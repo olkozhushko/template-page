@@ -6,6 +6,8 @@ import "./img/ipad.png";
 import "./scss/nav.scss";
 import "./scss/servicesSection.scss";
 import "./scss/featuresSection.scss";
+import "./scss/skillsSection.scss";
+import "./scss/sampleSection.scss";
 
 import "../node_modules/@fortawesome/fontawesome-free/js/all";
 
