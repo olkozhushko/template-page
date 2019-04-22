@@ -1,14 +1,59 @@
 @import "main.scss";
+$photo-width: 270px;
+$els: 6;
+
+@function sampleBlockWidth($width, $elnum) {
+  @return $width * $elnum;
+}
 
 .sample-work-section {
-  padding: $section-pad;
+  padding: 4rem 0;
   background: $theme-light;
 }
 
-.sample-block__image-wrapper {
-  
+.section-header-wrapper_pad {
+  padding: 0 3rem;
 }
 
 .sample-block {
+  width: 100%;
   overflow: hidden;
+}
+
+.sample-block__image-wrapper {
+  width: sampleBlockWidth($photo-width, $els);
+  margin-left: -50px;
+  display: grid;
+  grid-template-columns: repeat($els, $photo-width);
+  grid-template-rows: repeat(2, $photo-width);
+  grid-gap: 0.1rem;
+}
+
+.sample-block__img {
+  width: 100%;
+  height: 100%;
+}
+
+.view-all-work {
+  padding: 3rem 4rem;
+}
+
+.view-all-work__btn {
+  color: $el-color;
+  padding: 0.5rem 0;
+  text-align: center;
+  text-transform: uppercase;
+  font-size: 0.8rem;
+  background: $page-theme;
+  width: 100%;
+  border: none;
+  outline: none;
+  border-radius: 0.2rem;
+  opacity: 1;
+  transition: all 0.3s;
+}
+
+.view-all-work__btn:hover {
+  opacity: 0.8;
+  color: #ffffff;
 }

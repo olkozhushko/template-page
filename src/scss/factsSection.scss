@@ -1,0 +1,34 @@
+@import "./main.scss";
+
+.company-facts-section {
+  padding: $section-pad;
+  background: $theme-dark;
+}
+
+.facts-block {
+  display: flex;
+}
+
+.facts-block__card {
+  padding: 0.5rem;
+  flex-basis: 20%;
+}
+
+.square {
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  margin: 0 1rem;
+  background: $page-theme;
+  transform: rotate(45deg);
+}
+
+.facts-card__estim {
+  display: inline-block;
+  color: $el-color;
+}
+
+.num {
+  display: inline-block;
+  font-size: 5rem;
+}
