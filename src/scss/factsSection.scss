@@ -1,12 +1,19 @@
 @import "./main.scss";
 
-.company-facts-section {
-  padding: $section-pad;
+.company-facts-section__main-wrapper {
   background: $theme-dark;
+  padding: $section-pad;
+}
+
+.section__desc_fact-color {
+  color: #545454;
+  font-weight: 600;
 }
 
 .facts-block {
   display: flex;
+  justify-content: space-around;
+  margin-top: 5rem;
 }
 
 .facts-block__card {
@@ -28,7 +35,75 @@
   color: $el-color;
 }
 
+.facts-card__inform {
+  display: flex;
+}
+
 .num {
   display: inline-block;
   font-size: 5rem;
+}
+
+.facts-card__delimit {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 1.5rem;
+}
+
+.delimit-line {
+  height: 0.08rem;
+  background-color: #484848;
+  flex-basis: 42%;
+}
+
+.facts-card__icon {
+  font-size: 1.5rem;
+  color: $page-theme;
+  margin: 0 0.3rem;
+}
+
+.facts-card__text {
+  margin-top: 1rem;
+  font-size: 1rem;
+  text-align: center;
+  font-weight: 600;
+  text-transform: uppercase;
+  color: #5F5F5F;
+}
+
+.facts-card__text-accent {
+  font-size: 0.7rem;
+  font-weight: inherit;
+}
+
+.company-facts-section__use-product {
+  padding: 2rem 4rem;
+  display: flex;
+  align-items: center;
+  background: $page-theme;
+  justify-content: space-between;
+}
+
+.use-product__text {
+  color: $el-color;
+  text-transform: uppercase;
+  font-weight: 600;
+  flex-basis: 70%;
+}
+
+.use-product__btn {
+  background: $el-color;
+  text-transform: uppercase;
+  padding: 0.5rem 1rem;
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: #606060;
+  border-radius: 0.15rem;
+  margin-left: 1rem;
+  transition: all 0.3s;
+}
+
+.use-product__btn:hover {
+  background: rgb(224, 219, 219);
 }
