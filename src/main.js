@@ -10,11 +10,13 @@ import "./scss/skillsSection.scss";
 import "./scss/sampleSection.scss";
 import "./scss/factsSection.scss";
 import "./scss/memberSection.scss";
+import "./scss/testimonialSection.scss";
 
 import "../node_modules/@fortawesome/fontawesome-free/js/all";
 
 import handleDragGallery from "./js/galleryDrag";
 import handleBtnClick from "./js/memberCarousel";
+import quoteSwitcher from "./js/quoteSwitcher";
 
 const dragGallery = {
   img: document.querySelector(".sample-block__img"),
@@ -37,5 +39,17 @@ const memberSectionCarousel = {
   }
 }
 
+const quoteSwitcherObj = {
+  items: document.querySelectorAll(".testimonial-block__item"),
+  prevBtn: document.querySelector(".testimonial-block__prev-btn"),
+  nextBtn: document.querySelector(".testimonial-block__next-btn"),
+  wrapper: document.querySelector(".testimonial-block__carousel"),
+  switchQuote() {
+    this.prevBtn.addEventListener("click", (e) => quoteSwitcher(e, this.items,this.wrapper));
+    this.nextBtn.addEventListener("click", (e) => quoteSwitcher(e, this.items, this.wrapper));
+  }
+}
+
 dragGallery.dragEvent();
 memberSectionCarousel.btnClick();
+quoteSwitcherObj.switchQuote();
