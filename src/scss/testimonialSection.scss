@@ -43,9 +43,24 @@
 
 .btn-switcher {
   border: none;
-  padding: 0.1rem 0.6rem;
+  padding: 0.15rem 0.65rem;
   background: $el-color;
-  border-radius: 0.15rem;
+  border-radius: 0.2rem;
+  transition: all 0.3s;
+}
+
+.btn-switcher:hover {
+  background: #383838;
+}
+
+.btn-switcher:hover .icon-caret {
+  color: #E4E4E4;
+}
+
+.icon-caret {
+  font-size: 1.5rem;
+  color: $page-theme;
+  transition: all 0.3s;
 }
 
 .btn-switcher:hover {
@@ -59,4 +74,87 @@
 
 .testimonial-block__item {
   transition: all 1s;
+}
+
+// users brand section
+
+.users-brand-block {
+  padding: 3rem 4rem;
+  background: #383838;
+  position: relative;
+}
+
+.users-brand-container {
+  width: 1100px;
+  margin: 0 auto;
+  overflow: hidden;
+}
+
+.users-brand__wrapper {
+  width: 9000px;
+  display: flex;
+  transition: all 0.5s;
+}
+
+.brand-user__card {
+  width: 250px;
+  height: 150px;
+  background: #363636;
+  margin-right: 25px;
+  border-radius: 0.15rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.5s;
+}
+
+.brand-user__card:hover {
+  background: #333333;
+  
+}
+
+.brand-user__card:hover .brand-user__icon{
+  color: #E4E4E4;
+}
+
+.brand-user__card:hover .brand-user__desc {
+  color: #E4E4E4;
+}
+
+
+.brand-user__icon {
+  font-size: 3rem;
+  color: #6C6C6C;
+  transition: all 0.5s;
+}
+
+.brand-user__desc {
+  font: 1.5rem/1.5rem impact;
+  color: #6C6C6C;
+  text-transform: lowercase;
+  margin-top: 0.8rem;
+  transition: all 0.5s;
+}
+
+.btn-switcher-next_pos_sided, .btn-switcher-prev_pos_sided {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.btn-switcher-next_pos_sided {
+  right: 1rem;
+}
+
+.btn-switcher-prev_pos_sided {
+  left: 1rem;
+}
+
+.btn-switcher_brand:hover {
+  background: $page-theme;
+}
+
+.btn-switcher_brand:hover .icon-caret {
+  color: $el-color;
 }

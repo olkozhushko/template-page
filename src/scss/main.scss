@@ -1,6 +1,6 @@
 $theme-dark: #383838;
 $theme-light: #F9F9F9;
-$section-pad: 5rem 3rem 3rem 3rem;
+$section-pad: 5rem 4rem 3rem 4rem;
 $theme-text-dark: #797373;
 $page-theme: #00A99D;
 $text-color: #939393;
@@ -23,4 +23,16 @@ a {
 
 ul {
   list-style-type: none;
+}
+
+.page-btn {
+  color: #E4E4E4;
+  font-size: 0.75rem;
+  font-weight: 600;
+  padding: 0.4rem 0.7rem;
+  background: $page-theme; 
+  border-radius: 0.15rem;
+  border: none;
+  text-transform: uppercase;
+  transition: all 0.3s linear;
 }

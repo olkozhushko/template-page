@@ -1,26 +1,27 @@
 let position = 0;
 
-const handleBtnClick = (event, elems, membersCont) => {
+const handleBtnClick = (event, elems, cont) => {
 
    let width = elems[0].offsetWidth;
    
    let elMarginRight = parseInt(getComputedStyle(elems[0]).marginRight);
-   
+   console.log(elMarginRight);
    if(event.currentTarget.dataset.btn === "prev") {
     position += width + elMarginRight;
     position = Math.min(0, position);
-  
-    membersCont.style.marginLeft = position + "px";
+    
+    console.log(position);
+    cont.style.marginLeft = position + "px";
 
    } else if (event.currentTarget.dataset.btn === "next") {
      
      position += -width - elMarginRight;
-     let marginLimit = (elems.length - 1) * (width + elMarginRight) + width - (4 * width + elMarginRight * 3);
+     let marginLimit = (elems.length) * (width + elMarginRight) - (4 * width + elMarginRight * 4);
      
      position = Math.max(-marginLimit, position);
      
-    
-     membersCont.style.marginLeft = position + "px";
+     console.log(getComputedStyle(cont).marginLeft);
+     cont.style.marginLeft = position + "px";
    }
 }
 

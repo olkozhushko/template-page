@@ -11,11 +11,12 @@ import "./scss/sampleSection.scss";
 import "./scss/factsSection.scss";
 import "./scss/memberSection.scss";
 import "./scss/testimonialSection.scss";
+import "./scss/productPricesSection.scss";
 
 import "../node_modules/@fortawesome/fontawesome-free/js/all";
 
 import handleDragGallery from "./js/galleryDrag";
-import handleBtnClick from "./js/memberCarousel";
+import handleBtnClick from "./js/elemsCarousel";
 import quoteSwitcher from "./js/quoteSwitcher";
 
 const dragGallery = {
@@ -31,11 +32,10 @@ const memberSectionCarousel = {
   elemsCont: document.querySelector(".members-block"),
   prevBtn: document.querySelector(".member-switcher_previous"),
   nextBtn: document.querySelector(".member-switcher_next"),
-  position: 0,
   btnClick() {
-    this.prevBtn.addEventListener("click", (e) => handleBtnClick(e, this.elems, this.elemsCont, this.position));
+    this.prevBtn.addEventListener("click", (e) => handleBtnClick(e, this.elems, this.elemsCont));
 
-    this.nextBtn.addEventListener("click", (e) => handleBtnClick(e, this.elems, this.elemsCont, this.position));
+    this.nextBtn.addEventListener("click", (e) => handleBtnClick(e, this.elems, this.elemsCont));
   }
 }
 
@@ -50,6 +50,16 @@ const quoteSwitcherObj = {
   }
 }
 
+const usersBrandsCarousel = {
+  elems: document.querySelectorAll(".brand-user__card"),
+  elemsCont: document.querySelector(".users-brand__wrapper"),
+  prevBtn: document.querySelectorAll(".btn-switcher_brand")[0],
+  nextBtn: document.querySelectorAll(".btn-switcher_brand")[1],
+}
+
+Object.setPrototypeOf(usersBrandsCarousel, memberSectionCarousel);
+
 dragGallery.dragEvent();
 memberSectionCarousel.btnClick();
 quoteSwitcherObj.switchQuote();
+usersBrandsCarousel.btnClick();
