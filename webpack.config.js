@@ -7,11 +7,12 @@ module.exports = {
   entry: "./src/main.js",
   output: {
     path: path.resolve(__dirname, "dist"),
-    filename: "bundle.js"
+    filename: "bundle.js",
+    publicPath: path.resolve(__dirname, "dist")
   },
   devtool: 'inline-source-map',
   devServer: {
-    contentBase: "./dist"
+    contentBase: "dist"
   },
   plugins: [
     new CleanWebpackPlugin(),
@@ -21,7 +22,7 @@ module.exports = {
     new HtmlWebpackPlugin({
       hash: true,
       template: './src/index.html',
-      filename: 'index.html' //relative to root of the application
+      filename: 'index.html' //relative to the root of the application
     })
   ],
   module: {
@@ -31,8 +32,34 @@ module.exports = {
         use: [ 'style-loader', MiniCssExtractPlugin.loader, 'css-loader', 'postcss-loader', 'sass-loader']
       },
       {
-        test: /\.(png|svg|jpg|gif)$/,
-        use: ["file-loader"]
+        test: /\.(gif|png|jpe?g|svg)$/i,
+        use: [
+          'file-loader',
+          {
+            loader: 'image-webpack-loader',
+            options: {
+              mozjpeg: {
+                progressive: true,
+                quality: 65
+              },
+              // optipng.enabled: false will disable optipng
+              optipng: {
+                enabled: false,
+              },
+              pngquant: {
+                quality: '65-90',
+                speed: 4
+              },
+              gifsicle: {
+                interlaced: false,
+              },
+              // the webp option will enable WEBP
+              webp: {
+                quality: 75
+              }
+            }
+          },
+        ],
       },
       {
         test: /\.(woff|woff2|eot|ttf|otf)$/,
