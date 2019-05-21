@@ -80,3 +80,26 @@
   border-color: transparent;
   color: #E4E4E4;
 }
+
+@media screen and (max-width: 876px) {
+  .double-lines-container {
+    display: none;
+  }
+
+  .section__desc {
+    display: none;
+  }
+  
+  .slogan-container {
+    justify-content: center;
+  }
+}
+
+@media screen and (max-width: 678px) {
+  .cards-container {
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    margin: 0;
+  }
+}

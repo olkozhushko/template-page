@@ -1,0 +1,153 @@
+@import "./main.scss";
+
+.logo-icon__title {
+  color: $text-color;
+  font-size: 1.3rem;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.logo-icon {
+  width: 2.5rem;
+  height: 2.5rem;
+}
+
+.social-contact__wrapper {
+  padding: 3rem 0;
+  background: #383838;
+}
+
+.contact-block__item {
+  border: 1.5px solid #606060;
+  border-radius: 0.2rem;
+  width: 2.5rem;
+  height: 2.5rem;
+  margin-left: 1rem;
+  transition: all 0.3s;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.contact-block__item:hover {
+  border: 1.5px solid #bdb0b0;
+}
+
+.contact-block__item:last-child {
+  margin-left: none;
+}
+
+.contact-block {
+  width: 100%;
+  padding: 3rem 0;
+  display: flex;
+  justify-content: center;
+}
+
+.contact-block__list {
+  display: flex;
+}
+
+.contact-block__link-icon {
+  color: $el-color;
+  display: inline-block;
+}
+
+//form styling
+
+.contact-section__form-container {
+  background: #fcf9f9;
+  width: 100%;
+  // padding: 4rem;
+  position: relative;
+}
+
+.google-map-bg {
+  width: 100%;
+  height: 500px;
+}
+
+.form-group {
+  padding: 1.5rem;
+  width: 30%;
+  background: $theme-light;
+  border: 1px solid #DFDFDF;
+  border-radius: 0.15rem;
+  position: absolute;
+  top: 4rem;
+  left: 4rem;
+}
+
+.form-group__controls {
+  width: 100%;
+  padding: 0.4rem 0 0.4rem 1rem;
+  border: 1px solid #DFDFDF;
+  border-radius: 0.2rem;
+  margin-bottom: 1.5rem;
+  background: inherit;
+}
+
+.form-group__controls::placeholder {
+  font: 0.8rem/1rem "Courier New", sans-serif;
+  font-style: italic;
+}
+
+.form-group__message {
+  resize: none;
+  min-height: 8rem;
+}
+
+.form-group__btn {
+  width: 100%;
+  padding: 0.5rem 0;
+  transition: all 0.3s;
+}
+
+.form-group__btn:hover {
+  background: rgb(16, 189, 177);
+}
+
+//the media queries block
+
+@media screen and (max-width: 1100px) {
+  .form-group {
+    width: 40%;
+    margin: 0 auto;
+  }
+}
+
+@media screen and (max-width: 876px) {
+  .google-map-bg {
+    display: none;
+  }
+
+  .form-group {
+    position: static;
+    width: 60%;
+    margin: 0 auto;
+  }
+
+  .contact-section__form-container {
+    padding: 1rem 0;
+  }
+
+  .contact-block__list {
+    display: grid;
+    grid-template-columns: repeat(5, 2.5rem);
+    grid-template-rows: 2.5rem 2.5rem;
+    grid-gap: 1rem;
+    justify-content: space-between;
+  }
+
+  .contact-block__item {
+    margin: 0;
+  }
+
+}
+
+@media screen and (max-width: 676px) {
+  .form-group {
+    width: 80%;
+    margin: 0 auto;
+  }
+}

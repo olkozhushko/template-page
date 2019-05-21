@@ -1,0 +1,11 @@
+@import "./main.scss";
+
+.footer {
+  padding: 3rem 0 1rem 0;
+  background: $theme-dark;
+}
+
+.footer__content {
+  color: $el-color;
+  text-align: center;
+}

@@ -12,6 +12,8 @@ import "./scss/factsSection.scss";
 import "./scss/memberSection.scss";
 import "./scss/testimonialSection.scss";
 import "./scss/productPricesSection.scss";
+import "./scss/contactSection.scss";
+import "./scss/footer.scss";
 
 import "../node_modules/@fortawesome/fontawesome-free/js/all";
 

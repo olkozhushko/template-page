@@ -149,3 +149,14 @@
   font-size: 0.9rem;
   margin-top: 1rem;
 }
+
+@media screen and (max-width: 678px) {
+  .features-block {
+    width: 100%;
+    padding-top: 2rem;
+  }
+
+  // .features-card {
+  //   flex-direction: column;
+  // }
+}
