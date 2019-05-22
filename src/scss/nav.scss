@@ -69,16 +69,17 @@ $theme: #01A89D;
   margin: 0;
 }
 
-@media screen and (max-width: 992px) {
+@media screen and (max-width: 989px) {
   .page-nav__menu {
-    flex-basis: 75%;
+    flex-basis: 100%;
+  }
+
+  .logo-container {
+    display: none;
   }
 }
 
 @media screen and (max-width: 768px) {
-  .logo-container {
-    display: none;
-  }
 
   .page-nav__btn-toggler {
     display: inline-block;

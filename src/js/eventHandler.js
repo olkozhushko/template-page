@@ -3,7 +3,7 @@ class mainEventsHandler {
 clickHandler(e) {
   let target = e.target;
 
-  if(target.classList.contains("page-nav__btn-toggler")) {
+  if(target.closest(".page-nav__btn-toggler")) {
     let menuList = document.querySelector(".page-nav__menu");
 
     menuList.classList.toggle("page-mav__menu_active");
