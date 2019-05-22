@@ -1,49 +1,66 @@
-const handleDragGallery = function(event, imgEl, wrapEl) {
-  let target = event.target.closest(".draggable");
+const dragElems = {
+  img: document.querySelector(".sample-block__img"),
+  blockEl: document.querySelector(".sample-block"),
+};
 
-  if(!target) return;
+class DragGallery {
+  constructor(imgEl, wrapEl) {
+    this.imgEl = imgEl;
+    this.wrapEl = wrapEl;
 
-  let currentMousePos = event.pageX;
+    this.handleDragGallery = this.handleDragGallery.bind(this);
+  }
 
-  function moveAt(pageX) {
-    let passedDis = pageX - currentMousePos;
-    currentMousePos = pageX;
+  handleDragGallery(event) {
+    let target = event.target.closest(".draggable");
+    let self = this;
 
-    let dragFullWidth = imgEl.offsetWidth * 6;
-    console.log(dragFullWidth);
-    let dragWidth = wrapEl.offsetWidth;
-    console.log(dragWidth);
+    if (!target) return;
 
-    let marginLeft = parseInt(getComputedStyle(target).marginLeft) + passedDis;
-  
-    if(passedDis < 0) {
-      let max = dragFullWidth - dragWidth;
-      marginLeft = Math.max(marginLeft, -max);
-    } else {
-      marginLeft = Math.min(0, marginLeft);
+    let currentMousePos = event.pageX;
+
+    function moveAt(pageX) {
+      let passedDis = pageX - currentMousePos;
+      currentMousePos = pageX;
+
+      let dragFullWidth = self.imgEl.offsetWidth * 6;
+      let dragWidth = self.wrapEl.offsetWidth;
+
+      let marginLeft =
+        parseInt(getComputedStyle(target).marginLeft) + passedDis;
+
+      if (passedDis < 0) {
+        let max = dragFullWidth - dragWidth;
+        marginLeft = Math.max(marginLeft, -max);
+      } else {
+        marginLeft = Math.min(0, marginLeft);
+      }
+
+      target.style.marginLeft = marginLeft + "px";
     }
 
+    function handleMouseMove(e) {
+      moveAt(e.pageX);
+    }
 
-    target.style.marginLeft = marginLeft + "px";
+    function handleMouseUp(e) {
+      let tarEl = e.target.closest(".draggable");
+
+      if (!tarEl) return;
+
+      target.removeEventListener("mousemove", handleMouseMove);
+      document.removeEventListener("mouseup", handleMouseUp);
+    }
+
+    target.addEventListener("mousemove", handleMouseMove);
+    document.addEventListener("mouseup", handleMouseUp);
+
+    target.ondragstart = () => false;
   }
 
-  function handleMouseMove(e) {
-    moveAt(e.pageX);
+  executeEvent() {
+    document.addEventListener("mousedown", this.handleDragGallery);
   }
-
-  function handleMouseUp(e) {
-    let tarEl = e.target.closest(".draggable");
-
-    if(!tarEl) return;
-    
-    target.removeEventListener("mousemove", handleMouseMove);
-    document.removeEventListener("mouseup", handleMouseUp);
-  }
-
-  target.addEventListener("mousemove", handleMouseMove);
-  document.addEventListener("mouseup", handleMouseUp);
-
-  target.ondragstart = () => false;
 }
 
-export default handleDragGallery;
+export default new DragGallery(dragElems.img, dragElems.blockEl);

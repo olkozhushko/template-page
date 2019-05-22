@@ -1,5 +1,3 @@
-@import "main.scss";
-
 .services-section {
   padding: $section-pad;
   background: $theme-light;
@@ -10,7 +8,7 @@
 }
 
 .double-lines-container_title-width {
-  flex-basis: 36%;
+  flex-basis: 34%;
 }
 
 .section__desc {
@@ -81,25 +79,30 @@
   color: #E4E4E4;
 }
 
+@media screen and (max-width: 989px) {
+  .double-lines-container {
+    flex-basis: 31%;
+  }
+}
+
 @media screen and (max-width: 876px) {
   .double-lines-container {
-    display: none;
-  }
-
-  .section__desc {
     display: none;
   }
   
   .slogan-container {
     justify-content: center;
   }
+
+  .cards-container {
+    flex-direction: column;
+    width: 70%;
+    margin: 0 auto;
+  }
 }
 
 @media screen and (max-width: 678px) {
   .cards-container {
-    flex-direction: column;
-    align-items: center;
     width: 100%;
-    margin: 0;
   }
 }

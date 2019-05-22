@@ -44,3 +44,16 @@ button {
 button:hover, a:hover {
   cursor: pointer;
 }
+
+@import "./header.scss";
+@import "./nav.scss";
+@import "./servicesSection.scss";
+@import "./featuresSection.scss";
+@import "./skillsSection.scss";
+@import "./sampleSection.scss";
+@import "./factsSection.scss";
+@import "./memberSection.scss";
+@import "./testimonialSection.scss";
+@import "./productPricesSection.scss";
+@import "./contactSection.scss";
+@import "./footer.scss";

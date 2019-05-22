@@ -1,5 +1,4 @@
 $theme: #01A89D;
-@import "./main.scss";
 
 .page-nav {
   display: flex;
@@ -50,5 +49,73 @@ $theme: #01A89D;
   background: $theme;
   color: #E4E4E4;
 }
+
+.page-nav__btn-toggler {
+  padding: 0.15rem;
+  background: none;
+  display: none;
+  outline: none;
+}
+
+.btn-toggler__line {
+  display: block;
+  width: 1.4rem;
+  height: 3px;
+  background: rgb(248, 74, 74);
+  margin-bottom: 0.3rem;
+}
+
+.btn-toggler__line:last-child {
+  margin: 0;
+}
+
+@media screen and (max-width: 992px) {
+  .page-nav__menu {
+    flex-basis: 75%;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .logo-container {
+    display: none;
+  }
+
+  .page-nav__btn-toggler {
+    display: inline-block;
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+
+  .page-nav {
+    justify-content: flex-start;
+    position: absolute;
+    top: 2rem;
+    left: 2rem;
+    border: none;
+  }
+
+  .page-nav__menu {
+    flex-basis: 100%;
+    flex-direction: column;
+    align-items: stretch;
+    background: rgba(216, 214, 214, 0.6);
+    height: 0px;
+    width: 0;
+    overflow: hidden;
+    transition: all 0.5s linear;
+  }
+
+  .page-mav__menu_active {
+    height: 250px;
+    width: 100%;
+  }
+
+  .page-nav__link:hover {
+    background: none;
+    color: $page-theme;
+  }
+}
+
 
 
