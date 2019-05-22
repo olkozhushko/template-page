@@ -1,5 +1,5 @@
 .testimonial-block {
-  padding: 3rem 10rem 2rem 10rem;
+  padding: 3rem 0 2rem 0;
   background: $page-theme;
   text-align: center;
 }
@@ -7,7 +7,7 @@
 .testimonial-wrapper {
   overflow: hidden;
   padding: 1rem 0;
-  width: 700px;
+  width: 70vw;
   margin: 0 auto;
 }
 
@@ -66,7 +66,7 @@
 }
 
 .testimonial-block__item {
-  width: 700px;
+  width: 70vw;
   height: 150px;
   transition: all 1s;
 }
@@ -152,4 +152,14 @@
 
 .btn-switcher_brand:hover .icon-caret {
   color: $el-color;
+}
+
+@media screen and (max-width: 989px) {
+  .testimonial-block__item {
+    width: 80vw;
+  }
+
+  .testimonial-wrapper {
+    width: 80vw;
+  }
 }
