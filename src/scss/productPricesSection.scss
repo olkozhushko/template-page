@@ -1,5 +1,5 @@
 .double-lines-container_price-width {
-  flex-basis: 35%;
+  flex-basis: 33%;
 }
 
 .product-prices-wrapper {
@@ -124,7 +124,7 @@
   color: rgb(7, 7, 7);
 }
 
-@media screen and (max-width: 1000px) {
+@media screen and (max-width: 989px) {
   .price-card {
     flex-basis: 45%;
     margin-top: 2rem;
@@ -134,6 +134,10 @@
     font-size: 1.3rem;
     flex-basis: 50%;
     text-align: center;
+  }
+
+  .double-lines-container_price-width {
+    flex-basis: 29%;
   }
 }
 
