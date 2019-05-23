@@ -1,27 +1,36 @@
-// const scrollELements = {
-//   home: document.getElementById("header"),
-//   services: document.getElementById("services"),
-//   features: document.getElementById("features"),
-//   skills: document.getElementById("skills"),
-//   portf: document.getElementById("sample-work"),
-//   member: document.getElementById("member"),
-//   contact: document.getElementById("contact")
-// }
+const scrollELements = {
+  header: document.getElementById("header"),
+  services: document.getElementById("services"),
+  features: document.getElementById("features"),
+  skills: document.getElementById("skills"),
+  portfolio: document.getElementById("sample-work"),
+  member: document.getElementById("member"),
+  contact: document.getElementById("contact"),
+  offering: document.getElementById("offering"),
+  prices: document.getElementById("prices")
+}
 
 
-// class Scroll {
-//   constructor(targElems) {
-//     this.targElems = targElems;
-//   }
+class Scroll {
+  constructor(targElems) {
+    this.targElems = targElems;
+  }
 
-//   scrollTo(e) {
-//     let target = e.target.closest(".page-nav__link");
+  scrollTo(e) {
+    let dataSet = ["header", "services", "features", "skills", "portfolio", "offering", "member", "prices", "contact"];
 
-//     if(!target) return;
+    e.preventDefault();
+    let target = e.target.closest(".page-nav__link");
 
-//     e.preventDefault();
+    if(!target) return;
+  
+    if(dataSet.includes(target.dataset.link)) {
+      this[target.dataset.link].scrollIntoView({block: "center", behavior: "smooth"});
+    }
 
-//     if(target.closest("#"))
+  }
 
-//   }
-// }
+  executeEvent() {
+    document.addEventListener("click", (e) => scrollTo(e));
+  }
+}
