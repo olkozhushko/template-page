@@ -54,7 +54,7 @@ module.exports = {
                 browsers: ["last 2 versions"]
               },
               sourceMap: isDevelopment,
-              plugins: () => [autoprefixer]
+              // plugins: () => [autoprefixer]
             }
           },
           {
