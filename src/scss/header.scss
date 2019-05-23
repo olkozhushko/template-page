@@ -116,7 +116,11 @@ $theme: #01A89D;
   }
 
   .double-lines-container {
-    flex-basis: 27%;
+    flex-basis: 26%;
+  }
+
+  .slogan-container__text {
+    font-size: 1.5rem;
   }
 }
 
@@ -142,6 +146,29 @@ $theme: #01A89D;
 
   .header__title {
     font-size: 2.2rem;
+  }
+}
+
+@media screen and (max-width: 486px) {
+  .header__title {
+    white-space: normal;
+    font-size: 1.8rem;
+  }
+
+  .slogan-container {
+    margin-top: 1rem;
+  }
+
+  .slogan-container__text {
+    font-size: 1.2rem;
+  }
+
+  .header {
+    padding-bottom: 2rem;
+  }
+
+  .see-more-container {
+    margin-top: 1.5rem;
   }
 }
 

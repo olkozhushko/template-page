@@ -46,6 +46,16 @@ button:hover, a:hover {
   cursor: pointer;
 }
 
+
+@media screen and (max-width: 876px) {
+  .double-lines-container {
+    display: none;
+  }
+
+}
+
+
+
 @import "./header.scss";
 @import "./nav.scss";
 @import "./servicesSection.scss";
@@ -58,3 +68,22 @@ button:hover, a:hover {
 @import "./productPricesSection.scss";
 @import "./contactSection.scss";
 @import "./footer.scss";
+
+@media screen and (max-width: 876px) {
+  .double-lines-container {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 678px) {
+  .angle_theme {
+    display: none;
+  }
+
+}
+
+@media screen and (max-width: 478px) {
+  .section {
+    padding: 1.5rem 0;
+  }
+}

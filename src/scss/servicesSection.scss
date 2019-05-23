@@ -7,7 +7,7 @@
   margin-bottom: 2rem;
 }
 
-.double-lines-container_title-width {
+.double-lines-container_section-width {
   flex-basis: 34%;
 }
 
@@ -80,15 +80,12 @@
 }
 
 @media screen and (max-width: 989px) {
-  .double-lines-container {
+  .double-lines-container_section-width {
     flex-basis: 31%;
   }
 }
 
 @media screen and (max-width: 876px) {
-  .double-lines-container {
-    display: none;
-  }
   
   .slogan-container {
     justify-content: center;

@@ -42,7 +42,7 @@
 
 .num {
   display: inline-block;
-  font-size: 5rem;
+  font-size: 4rem;
 }
 
 .facts-card__delimit {
@@ -109,6 +109,21 @@
 
 .use-product__btn:hover {
   background: rgb(224, 219, 219);
+}
+
+@media screen and (max-width: 1220px) {
+  .facts-block__card {
+    flex-basis: 23%;
+  }
+
+  .num {
+    font-size: 3.2rem;
+  }
+
+  .square {
+    width: 8px;
+    height: 8px;
+  }
 }
 
 @media screen and (max-width: 989px) {
