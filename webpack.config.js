@@ -30,7 +30,7 @@ new HtmlWebpackPlugin({
     collapseWhitespace: true,
     caseSensitive: true,
     removeComments: true,
-    removeEmptyElements: true
+    removeEmptyElements: false
   } 
 })
 ],
@@ -41,6 +41,7 @@ rules: [
     use: [
       MiniCssExtractPlugin.loader,
                 { loader: "css-loader", options: {} },
+                'resolve-url-loader',
                 { loader: "postcss-loader", options: {sourceMap: isDevelopment} },
                 { loader: "sass-loader", options: {sourceMap: isDevelopment} }
     ]
@@ -76,24 +77,41 @@ rules: [
     ]
   },
   {
-    test: /\.(woff|woff2|eot|ttf|otf)$/,
-    use: ["file-loader"]
-  },
-  {
     test: /\.(html)$/,
     use: ["html-loader"]
   },
+  // {
+  //   test: /\.(woff2?|eot|ttf|otf)(\?.*)?$/,
+  //   loader: 'url-loader',
+  //   options: { limit: 1000, name: 'fonts/[name].[ext]', },
+  // },
+  // {
+  //   test: /\.(woff(2)?|ttf|eot|svg)(\?v=\d+\.\d+\.\d+)?$/,
+  //   use: [
+  //     {
+  //       loader: "file-loader",
+  //       options: {
+  //         name: "[name].[ext]",
+  //         outputPath: "fonts/"
+  //       }
+  //     }
+  //   ]
+  // },
   {
-    test: /\.(woff(2)?|ttf|eot|svg)(\?v=\d+\.\d+\.\d+)?$/,
-    use: [
-      {
-        loader: "file-loader",
-        options: {
-          name: "[name].[ext]",
-          outputPath: "fonts/"
-        }
-      }
-    ]
+    test: /\.woff(\?v=\d+\.\d+\.\d+)?$/,
+    loader: "url-loader?limit=10000&mimetype=application/font-woff"
+  }, {
+    test: /\.woff2(\?v=\d+\.\d+\.\d+)?$/,
+    loader: "url-loader?limit=10000&mimetype=application/font-woff"
+  }, {
+    test: /\.ttf(\?v=\d+\.\d+\.\d+)?$/,
+    loader: "url-loader?limit=10000&mimetype=application/octet-stream"
+  }, {
+    test: /\.eot(\?v=\d+\.\d+\.\d+)?$/,
+    loader: "file-loader"
+  }, {
+    test: /\.svg(\?v=\d+\.\d+\.\d+)?$/,
+    loader: "url-loader?limit=10000&mimetype=image/svg+xml"
   }
 ]
 }
