@@ -1,3 +1,9 @@
+$fa-font-path: '~@fortawesome/fontawesome-free/webfonts';
+@import "~@fortawesome/fontawesome-free/scss/fontawesome";
+@import "~@fortawesome/fontawesome-free/scss/regular";
+@import "~@fortawesome/fontawesome-free/scss/solid";
+@import "~@fortawesome/fontawesome-free/scss/brands";
+
 $theme-dark: #383838;
 $theme-light: #F9F9F9;
 $section-pad: 5rem 4rem 3rem 4rem;

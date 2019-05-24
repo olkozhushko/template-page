@@ -4,7 +4,7 @@ import "./img/bg_header.jpg";
 import "./img/logo.png";
 import "./img/ipad.png";
 
-import "../node_modules/@fortawesome/fontawesome-free/js/all";
+// import "../node_modules/@fortawesome/fontawesome-free/js/all";
 
 import dragGallery from "./js/galleryDrag";
 import {memberCarous, usersCarous} from "./js/elemsCarousel";
