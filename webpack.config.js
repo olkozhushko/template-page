@@ -80,23 +80,10 @@ rules: [
     test: /\.(html)$/,
     use: ["html-loader"]
   },
-  // {
-  //   test: /\.(woff2?|eot|ttf|otf)(\?.*)?$/,
-  //   loader: 'url-loader',
-  //   options: { limit: 1000, name: 'fonts/[name].[ext]', },
-  // },
-  // {
-  //   test: /\.(woff(2)?|ttf|eot|svg)(\?v=\d+\.\d+\.\d+)?$/,
-  //   use: [
-  //     {
-  //       loader: "file-loader",
-  //       options: {
-  //         name: "[name].[ext]",
-  //         outputPath: "fonts/"
-  //       }
-  //     }
-  //   ]
-  // },
+  {
+    test: /\.svg(\?v=\d+\.\d+\.\d+)?$/,
+    loader: "url-loader?limit=10000&mimetype=image/svg+xml"
+  },
   {
     test: /\.woff(\?v=\d+\.\d+\.\d+)?$/,
     loader: "url-loader?limit=10000&mimetype=application/font-woff"
@@ -109,10 +96,8 @@ rules: [
   }, {
     test: /\.eot(\?v=\d+\.\d+\.\d+)?$/,
     loader: "file-loader"
-  }, {
-    test: /\.svg(\?v=\d+\.\d+\.\d+)?$/,
-    loader: "url-loader?limit=10000&mimetype=image/svg+xml"
   }
+  
 ]
 }
 };
